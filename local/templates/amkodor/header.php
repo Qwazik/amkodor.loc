@@ -155,7 +155,7 @@
 							"AREA_FILE_SHOW" => "file",
 							"AREA_FILE_SUFFIX" => "inc",
 							"EDIT_TEMPLATE" => "",
-							"PATH" => "/include/logo.php"
+							"PATH" => "/include/home/logo.php"
 						)
 					);?>
         </div>
