@@ -146,52 +146,38 @@
 		<div class="header__content">
 			<div class="container">
 
-				<div class="logo"><a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/assets/img/logo.svg" alt="Логотип"></a></div>
+				<div class="logo">
+
+          <?$APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						"",
+						Array(
+							"AREA_FILE_SHOW" => "file",
+							"AREA_FILE_SUFFIX" => "inc",
+							"EDIT_TEMPLATE" => "",
+							"PATH" => "/include/logo.php"
+						)
+					);?>
+        </div>
 
 				<div class="head-menu">
-					<div class="burger-menu">
-						<div class="burger-menu-box">
-							<div class="burger-menu-inner"></div>
-						</div>
-					</div>
-					<div class="menu-wrapper-fixed">
-						<div class="menu-open-wrapper">
-							<nav class="header-nav">
-								<ul class="menu">
-									<li class="menu-item active">
-										<div class="menu-item__link menu-item__link--active menu-item__link--dd-open"><a href="about.html">О компании</a></div>
-										<ul class="menu-dd">
-											<li class="menu-dd-item">
-												<a href="#" class="menu-dd-item__link">Амкодор-Беларусь</a>
-											</li>
-											<li class="menu-dd-item">
-												<a href="#" class="menu-dd-item__link">Амкодор-Брянск</a>
-											</li>
-										</ul>
-									</li>
-									<li class="menu-item">
-										<a href="catalog.html" class="menu-item__link">Каталог</a>
-									</li>
-									<li class="menu-item">
-										<a href="#" class="menu-item__link">Сервис</a>
-									</li>
-									<li class="menu-item">
-										<a href="#" class="menu-item__link">Новости</a>
-									</li>
-									<li class="menu-item">
-										<a href="contacts.html" class="menu-item__link">Контакты </a>
-									</li>
-									<li class="menu-item">
-										<a href="dealers-page.html" class="menu-item__link">Дилерская сеть</a>
-									</li>
-									<li class="menu-item">
-										<a href="#" class="menu-item__link">Инструменты финансирования</a>
-									</li>
-								</ul>
-							</nav>
-							<span class="target"></span>
-						</div>
-					</div>
+					<?$APPLICATION->IncludeComponent("bitrix:menu", "main_menu", Array(
+	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+		"CHILD_MENU_TYPE" => "sub",	// Тип меню для остальных уровней
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"MAX_LEVEL" => "2",	// Уровень вложенности меню
+		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+			0 => "",
+		),
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"ROOT_MENU_TYPE" => "main",	// Тип меню для первого уровня
+		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+	),
+	false
+);?>
+
 				</div>
 
 			</div>
@@ -203,11 +189,11 @@
 
 	<!-- #middle-->
 	<div id="middle">
-    <?if(!$APPLICATION->GetCurPage()):?>
+    <?if($APPLICATION->GetCurPage() !== '/'):?>
 		<!-- inner pages bloks -->
 		<section class="main-screen-inner">
 			<div class="container">
-				<h1>О компании</h1>
+				<h1><?$APPLICATION->ShowTitle(false);?></h1>
 			</div>
 		</section>
 
