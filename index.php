@@ -147,22 +147,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 						"PATH" => "/include/home/dillers.php"
 					)
 				);?>
-        <form action="#" class="form-content">
-          <div class="title-site--h4">Обратный звонок</div>
-          <div class="form-group">
-            <div class="form-group__item">
-              <input type="text" placeholder="Имя *">
-            </div>
-            <div class="form-group__item">
-              <input type="tel" placeholder="+7" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18">
-              <span class="form__error">Это поле должно содержать телефон в формате +7 (123) 456-78-90</span>
-            </div>
-          </div>
-          <div class="form-content__btn group">
-            <button class="btn btn--min-width btn--sm btn--second-st">Отправить</button>
-            <div class="form-content-txt">С вами свяжутся в течение 20 минут</div>
-          </div>
-        </form>
+
       </div>
       <div class="dealers-info">
         <div class="dealers-info__title"><span>2000</span> погрузчиков</div>
