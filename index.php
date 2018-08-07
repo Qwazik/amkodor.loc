@@ -131,7 +131,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 		);?>
   </div>
 </section>
-test
+
 <section class="section-st section-st--dealers">
   <div class="container">
     <div class="dealers">
