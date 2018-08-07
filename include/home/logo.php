@@ -1,1 +1,1 @@
-<a href="/"><img src="/local/templates/amkodor/assets/img/logo.svg" alt="Логотип"></a>
+lslsls<a href="/"><img src="/local/templates/amkodor/assets/img/logo.svg" alt="Логотип"></a>
