@@ -1,5 +1,5 @@
-/bitrix/*
-!/bitrix/php_interface
+/bitrix
+!/bitrix/php_interface/init.php
 /html
 /upload
 /.idea
